@@ -12,3 +12,4 @@ jupyter>=1.0
 
 # Explicabilite / explainability - facultatif mais utile pour trouver les proxys
 shap>=0.44
+seaborn
