@@ -1,0 +1,8 @@
+{
+  "strategy": "logistic_C1.0 with geographic score contributions removed; top 40%",
+  "hidden_accuracy": null,
+  "selected": 1600,
+  "selection_rate": 0.4,
+  "centre_rate": 0.4220067453625632,
+  "remote_rate": 0.3679361179361179
+}
