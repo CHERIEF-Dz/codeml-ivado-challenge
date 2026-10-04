@@ -86,7 +86,7 @@ def main():
     (ROOT/'audit_results').mkdir(exist_ok=True)
     df=pd.read_csv(ROOT/'data/donnees_demandes.csv')
     candidates=pd.read_csv(ROOT/'data/candidats_evaluation.csv')
-    best=pd.read_csv(ROOT/'predictions.csv').set_index('id_candidat').loc[candidates.id_candidat,'decision_octroi'].to_numpy()
+    best=pd.read_csv(ROOT/'results_effort/predictions.csv').set_index('id_candidat').loc[candidates.id_candidat,'decision_octroi'].to_numpy()
     strata=group(df).astype(str)+'_'+df.decision_octroi.astype(str).to_numpy()
     names=['baseline','iforest_trim5','dbscan_trim','dbscan_feature']
     prob={k:np.zeros(len(df)) for k in names}

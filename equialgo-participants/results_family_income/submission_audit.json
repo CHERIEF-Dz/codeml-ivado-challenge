@@ -1,0 +1,71 @@
+{
+  "policy": "Modest financial-need priority at comparable academic/working merit",
+  "formula": "R + 0.14381742782570264 * weekly_hours - 0.67 * ln(income / 60000.0)",
+  "hours_weight": 0.14381742782570264,
+  "need_weight": 0.67,
+  "benefit_of_halving_income_in_r_points": 0.4644086109751634,
+  "income_weight_origin": "Policy choice, previously explored with aggregate-score sensitivity; not independently validated",
+  "rows": 4000,
+  "selected": 1600,
+  "selection_rate": 0.4,
+  "changed_from_tested_94_6": 106,
+  "incoming": {
+    "count": 53,
+    "mean": {
+      "cote_r_equivalent": 28.10037735849057,
+      "heures_travail_semaine": 12.075471698113208,
+      "revenu_familial_estime": 33689.377358490565
+    },
+    "median": {
+      "cote_r_equivalent": 27.97,
+      "heures_travail_semaine": 13.0,
+      "revenu_familial_estime": 33154.0
+    }
+  },
+  "outgoing": {
+    "count": 53,
+    "mean": {
+      "cote_r_equivalent": 28.74528301886793,
+      "heures_travail_semaine": 10.283018867924529,
+      "revenu_familial_estime": 107795.03773584905
+    },
+    "median": {
+      "cote_r_equivalent": 28.82,
+      "heures_travail_semaine": 10.0,
+      "revenu_familial_estime": 99839.0
+    }
+  },
+  "previous_selected": {
+    "count": 1600,
+    "mean": {
+      "cote_r_equivalent": 30.74410625,
+      "heures_travail_semaine": 11.168125,
+      "revenu_familial_estime": 68669.405625
+    },
+    "median": {
+      "cote_r_equivalent": 30.35,
+      "heures_travail_semaine": 11.0,
+      "revenu_familial_estime": 62125.0
+    }
+  },
+  "new_selected": {
+    "count": 1600,
+    "mean": {
+      "cote_r_equivalent": 30.72274375,
+      "heures_travail_semaine": 11.2275,
+      "revenu_familial_estime": 66214.655625
+    },
+    "median": {
+      "cote_r_equivalent": 30.35,
+      "heures_travail_semaine": 11.0,
+      "revenu_familial_estime": 59187.5
+    }
+  },
+  "centre_selection_rate": 0.39038785834738615,
+  "remote_selection_rate": 0.414004914004914,
+  "external_accuracy": null,
+  "external_f1_macro": null,
+  "baseline_file": "results_effort/predictions.csv",
+  "baseline_user_reported_accuracy": 0.946,
+  "sha256": "0ea24b666bd80e69538b73b97c2b8cf5547c65a6316ef1bf3f5f731e41ca87d1"
+}

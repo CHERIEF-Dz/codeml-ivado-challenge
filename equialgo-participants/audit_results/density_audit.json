@@ -158,7 +158,8 @@
   },
   "candidate_near_cutoff_count": 509,
   "effort_cutoff": 30.051991706082728,
-  "current_submission_accuracy_user_reported": 0.946,
+  "audited_submission": "results_effort/predictions.csv",
+  "audited_submission_accuracy_user_reported": 0.946,
   "hidden_accuracy_change": null,
   "prediction_changes": 0,
   "submission_sha256": "0120f838852cf652c01bcee39ee0ef453d2591a4b5394d033a506b4d48de18c6"

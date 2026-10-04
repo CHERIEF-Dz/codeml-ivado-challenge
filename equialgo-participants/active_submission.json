@@ -1,0 +1,8 @@
+{
+  "file": "predictions.csv",
+  "archive": "results_family_income/predictions.csv",
+  "policy": "family_income",
+  "status": "Awaiting external evaluation",
+  "sha256": "0ea24b666bd80e69538b73b97c2b8cf5547c65a6316ef1bf3f5f731e41ca87d1",
+  "best_scored_file": "results_effort/predictions.csv"
+}

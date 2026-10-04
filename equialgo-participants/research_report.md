@@ -2,7 +2,7 @@
 
 ## Decision
 
-**Keep `predictions.csv` as the externally tested 94.6% submission.** Its archive is `results_effort/predictions.csv`, SHA-256 `0120f838852cf652c01bcee39ee0ef453d2591a4b5394d033a506b4d48de18c6`. The prior 92.23% file remains in `results_academic/`. The original README is unchanged from commit `ef7047a`.
+**Baseline-research snapshot:** the externally tested 94.6% submission is archived at `results_effort/predictions.csv`. The active file on the family-income branch is described in `family_income_report.md`. Its archive is `results_effort/predictions.csv`, SHA-256 `0120f838852cf652c01bcee39ee0ef453d2591a4b5394d033a506b4d48de18c6`. The prior 92.23% file remains in `results_academic/`. The original README is unchanged from commit `ef7047a`.
 
 A separate **unscored** candidate is ready at `predictions_next_test.csv`. It modestly favors financial need, preserves 40% allocation, and changes 112 decisions from the 94.6% file. It must be evaluated externally before replacing the current best. No measured result above 94.6% is available.
 

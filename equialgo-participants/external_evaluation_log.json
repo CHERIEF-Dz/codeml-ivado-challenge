@@ -30,5 +30,12 @@
     "reported_accuracy": null,
     "f1_macro": null,
     "source": "Unscored financial-need trial; does not replace best submission"
+  },
+  {
+    "file": "results_family_income/predictions.csv",
+    "sha256": "0ea24b666bd80e69538b73b97c2b8cf5547c65a6316ef1bf3f5f731e41ca87d1",
+    "reported_accuracy": null,
+    "f1_macro": null,
+    "source": "User-selected modest family-income priority; awaiting evaluation"
   }
 ]

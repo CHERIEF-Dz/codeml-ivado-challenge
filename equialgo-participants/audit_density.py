@@ -68,10 +68,12 @@ def group_summary(frame, population, detector, flag):
 
 def main():
     OUT.mkdir(exist_ok=True)
-    original = (ROOT/'predictions.csv').read_bytes()
+    # This audit describes the scored baseline, even on alternative-policy branches.
+    baseline_path = ROOT/'results_effort/predictions.csv'
+    original = baseline_path.read_bytes()
     history = pd.read_csv(ROOT/'data/donnees_demandes.csv')
     candidates = pd.read_csv(ROOT/'data/candidats_evaluation.csv')
-    submission = pd.read_csv(ROOT/'predictions.csv').set_index('id_candidat')
+    submission = pd.read_csv(baseline_path).set_index('id_candidat')
     selected = submission.loc[candidates.id_candidat,'decision_octroi'].to_numpy()
     trials=[]
     primary=None
@@ -144,7 +146,8 @@ def main():
         'primary_rule':'Predeclared context view, min_samples20, eps=90th percentile of 20-neighbor training distances (including self)',
         'primary_dbscan':primary_parameters,'isolation_forest':'300 trees; random_state41; contamination=.05 is a chosen review rate, not an estimated anomaly prevalence',
         'group_rates':summaries,'candidate_flags':details,'candidate_near_cutoff_count':int(review.near_cutoff.sum()),
-        'effort_cutoff':cutoff,'current_submission_accuracy_user_reported':.946,
+        'effort_cutoff':cutoff,'audited_submission':'results_effort/predictions.csv',
+        'audited_submission_accuracy_user_reported':.946,
         'hidden_accuracy_change':None,'prediction_changes':0,
         'submission_sha256':hashlib.sha256(original).hexdigest()}
     (OUT/'density_audit.json').write_text(json.dumps(report,indent=2)+'\n')
@@ -162,7 +165,7 @@ def main():
     fig.tight_layout()
     fig.savefig(OUT/'density_audit.png',dpi=160)
     plt.close(fig)
-    assert (ROOT/'predictions.csv').read_bytes()==original
+    assert baseline_path.read_bytes()==original
     print(json.dumps({'primary':primary_parameters,'candidate_flags':details,'near_cutoff':int(review.near_cutoff.sum())},indent=2))
 
 
