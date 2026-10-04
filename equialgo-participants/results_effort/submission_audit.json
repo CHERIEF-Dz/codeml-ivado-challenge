@@ -1,0 +1,25 @@
+{
+  "strategy": "R score plus learned working-hours contribution; top 40%",
+  "hours_weight_in_r_score_units": 0.14381742782570264,
+  "five_fold_weight_estimates": [
+    0.15220821106650068,
+    0.13989316136755303,
+    0.1351152355594264,
+    0.1428920097174792,
+    0.14771762947135125
+  ],
+  "fold_seed": 41,
+  "selection_rate": 0.4,
+  "selected": 1600,
+  "rows": 4000,
+  "centre_selection_rate": 0.40008431703204045,
+  "remote_selection_rate": 0.3998771498771499,
+  "changed_from_academic_92_23": 224,
+  "new_awards": 112,
+  "removed_awards": 112,
+  "external_accuracy": 0.946,
+  "external_f1_macro": null,
+  "reference_warning": "Historical weight stability does not validate hidden-reference accuracy or fairness.",
+  "sha256": "0120f838852cf652c01bcee39ee0ef453d2591a4b5394d033a506b4d48de18c6",
+  "external_accuracy_source": "User reported accuracy94.6% for the R-score-plus-working-hours submission"
+}

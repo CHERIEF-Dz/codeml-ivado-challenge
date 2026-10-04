@@ -1,0 +1,11 @@
+{
+  "status": "Unscored experiment; best tested file is unchanged",
+  "score": "R + 0.135 * weekly_hours - 0.67 * log(income / 60000)",
+  "rows": 4000,
+  "selected": 1600,
+  "changed_from_effort_94_6": 112,
+  "centre_selection_rate": 0.3920741989881956,
+  "remote_selection_rate": 0.41154791154791154,
+  "external_accuracy": null,
+  "sha256": "c64cbd4acb4b0197a3101efecac7713ae13e5422da4373e34d13e594b67ef2f9"
+}

@@ -1,14 +1,5 @@
 # ÉquiAlgo: fair student financing
 
-## Improved submission
-
-The current `predictions.csv` uses a logistic merit ranking with geographic score
-contributions removed and an exact 40% allocation budget. Regenerate it with
-`python model_corrige.py`. Run `python model_improved.py` separately to reproduce
-the historical-label benchmark. See [the improvement report](accuracy_improvement_report.md)
-for measured results, assumptions, alternatives, and reproduction commands.
-The best measured historical accuracy was 88.80%; hidden-reference accuracy is unknown.
-
 Engineering and Computer Science Hackathon 2026. 24-hour challenge.
 
 A Quebec financial institution scores scholarship and student-loan applications

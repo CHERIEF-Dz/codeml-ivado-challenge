@@ -1,0 +1,165 @@
+{
+  "purpose": "Audit only; outliers are not bad applicants or proven prediction errors.",
+  "fit_population": "10,000 historical rows; labels/IDs/region/postal/program/first-generation excluded from distances",
+  "features": [
+    "r_score",
+    "work_hours",
+    "log_income",
+    "log_distance"
+  ],
+  "scaling": "StandardScaler fitted on historical data only",
+  "primary_rule": "Predeclared context view, min_samples20, eps=90th percentile of 20-neighbor training distances (including self)",
+  "primary_dbscan": {
+    "view": "context",
+    "min_samples": 20,
+    "neighbor_distance_quantile": 0.9,
+    "eps": 0.7774184326156036,
+    "clusters": 1,
+    "largest_cluster_share": 0.9796,
+    "history_noise": 204,
+    "candidate_noise": 108,
+    "history_noise_rate": 0.0204,
+    "candidate_noise_rate": 0.027,
+    "candidate_ambiguous_border": 0
+  },
+  "isolation_forest": "300 trees; random_state41; contamination=.05 is a chosen review rate, not an estimated anomaly prevalence",
+  "group_rates": [
+    {
+      "population": "history",
+      "detector": "DBSCAN",
+      "group": "All",
+      "rows": 10000,
+      "flagged": 204,
+      "flag_rate": 0.0204
+    },
+    {
+      "population": "history",
+      "detector": "DBSCAN",
+      "group": "Centre",
+      "rows": 6000,
+      "flagged": 105,
+      "flag_rate": 0.0175
+    },
+    {
+      "population": "history",
+      "detector": "DBSCAN",
+      "group": "Remote",
+      "rows": 4000,
+      "flagged": 99,
+      "flag_rate": 0.02475
+    },
+    {
+      "population": "history",
+      "detector": "IsolationForest",
+      "group": "All",
+      "rows": 10000,
+      "flagged": 500,
+      "flag_rate": 0.05
+    },
+    {
+      "population": "history",
+      "detector": "IsolationForest",
+      "group": "Centre",
+      "rows": 6000,
+      "flagged": 218,
+      "flag_rate": 0.036333333333333336
+    },
+    {
+      "population": "history",
+      "detector": "IsolationForest",
+      "group": "Remote",
+      "rows": 4000,
+      "flagged": 282,
+      "flag_rate": 0.0705
+    },
+    {
+      "population": "evaluation",
+      "detector": "DBSCAN",
+      "group": "All",
+      "rows": 4000,
+      "flagged": 108,
+      "flag_rate": 0.027
+    },
+    {
+      "population": "evaluation",
+      "detector": "DBSCAN",
+      "group": "Centre",
+      "rows": 2372,
+      "flagged": 50,
+      "flag_rate": 0.021079258010118045
+    },
+    {
+      "population": "evaluation",
+      "detector": "DBSCAN",
+      "group": "Remote",
+      "rows": 1628,
+      "flagged": 58,
+      "flag_rate": 0.03562653562653563
+    },
+    {
+      "population": "evaluation",
+      "detector": "IsolationForest",
+      "group": "All",
+      "rows": 4000,
+      "flagged": 216,
+      "flag_rate": 0.054
+    },
+    {
+      "population": "evaluation",
+      "detector": "IsolationForest",
+      "group": "Centre",
+      "rows": 2372,
+      "flagged": 100,
+      "flag_rate": 0.04215851602023609
+    },
+    {
+      "population": "evaluation",
+      "detector": "IsolationForest",
+      "group": "Remote",
+      "rows": 1628,
+      "flagged": 116,
+      "flag_rate": 0.07125307125307126
+    }
+  ],
+  "candidate_flags": {
+    "DBSCAN": {
+      "flagged": 108,
+      "selected_flagged": 61,
+      "flagged_selection_rate": 0.5648148148148148,
+      "near_cutoff_flagged": 4,
+      "r_mean_flagged": 29.07796296296296,
+      "r_range_flagged": [
+        17.04,
+        40.0
+      ]
+    },
+    "IsolationForest": {
+      "flagged": 216,
+      "selected_flagged": 121,
+      "flagged_selection_rate": 0.5601851851851852,
+      "near_cutoff_flagged": 9,
+      "r_mean_flagged": 28.88,
+      "r_range_flagged": [
+        17.04,
+        40.0
+      ]
+    },
+    "Both": {
+      "flagged": 94,
+      "selected_flagged": 55,
+      "flagged_selection_rate": 0.5851063829787234,
+      "near_cutoff_flagged": 3,
+      "r_mean_flagged": 29.472659574468082,
+      "r_range_flagged": [
+        17.04,
+        40.0
+      ]
+    }
+  },
+  "candidate_near_cutoff_count": 509,
+  "effort_cutoff": 30.051991706082728,
+  "current_submission_accuracy_user_reported": 0.946,
+  "hidden_accuracy_change": null,
+  "prediction_changes": 0,
+  "submission_sha256": "0120f838852cf652c01bcee39ee0ef453d2591a4b5394d033a506b4d48de18c6"
+}

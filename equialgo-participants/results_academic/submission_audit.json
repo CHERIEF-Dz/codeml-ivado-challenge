@@ -1,0 +1,17 @@
+{
+  "strategy": "Academic R score only; global top 40%; candidate ID breaks exact ties",
+  "reason": "README names R score as merit and flags income, hours, distance, and postal code as regional proxies.",
+  "hidden_reference_accuracy": null,
+  "previous_external_feedback": {
+    "reported_value": 0.9,
+    "metric": "not clarified by user"
+  },
+  "rows": 4000,
+  "selected": 1600,
+  "selection_rate": 0.4,
+  "centre_selection_rate": 0.428752107925801,
+  "remote_selection_rate": 0.3581081081081081,
+  "changed_from_previous_attempt": 286,
+  "minimum_selected_r_score": 28.54,
+  "sha256": "c03bde31ebe14fe4f16f923db02b1b95464f261dbf2c693bac646c3445c090c1"
+}

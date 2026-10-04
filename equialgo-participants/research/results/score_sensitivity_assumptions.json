@@ -1,0 +1,12 @@
+{
+  "warning": "Assumption-based fits to three feedback values; not out-of-sample evidence or an accuracy ceiling.",
+  "expected_reference_prevalence": 0.4,
+  "academic_report": 0.9223,
+  "effort_report": 0.946,
+  "old_report": "approximately90%, metric not independently confirmed",
+  "source_files": [
+    "results_academic/predictions.csv",
+    "results_effort/predictions.csv",
+    "results_improved/predictions_merit.csv"
+  ]
+}

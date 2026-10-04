@@ -1,0 +1,13 @@
+population,detector,group,rows,flagged,flag_rate
+history,DBSCAN,All,10000,204,0.0204
+history,DBSCAN,Centre,6000,105,0.0175
+history,DBSCAN,Remote,4000,99,0.02475
+history,IsolationForest,All,10000,500,0.05
+history,IsolationForest,Centre,6000,218,0.036333333333333336
+history,IsolationForest,Remote,4000,282,0.0705
+evaluation,DBSCAN,All,4000,108,0.027
+evaluation,DBSCAN,Centre,2372,50,0.021079258010118045
+evaluation,DBSCAN,Remote,1628,58,0.03562653562653563
+evaluation,IsolationForest,All,4000,216,0.054
+evaluation,IsolationForest,Centre,2372,100,0.04215851602023609
+evaluation,IsolationForest,Remote,1628,116,0.07125307125307126

@@ -1,0 +1,7 @@
+{
+  "file": "results_effort/predictions.csv",
+  "sha256": "0120f838852cf652c01bcee39ee0ef453d2591a4b5394d033a506b4d48de18c6",
+  "user_reported_accuracy": 0.946,
+  "f1_macro": null,
+  "status": "Best externally reported accuracy in this session; indicative HxBuddy metric, not official rubric total"
+}
